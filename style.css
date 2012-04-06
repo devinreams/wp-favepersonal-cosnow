@@ -1,0 +1,323 @@
+/*
+Theme Name: Colorado Snow (FavePersonal)
+Author: Devin Reams
+Description: Child theme for cosnow.com.
+Template: favepersonal
+Version: 1.0
+*/
+
+#nav-main {
+	padding-top: 34px;
+	float: right;
+}
+
+@media screen and (max-width: 768px) {
+	#masthead {
+		display: none;
+	}
+	#nav-main {
+		padding-top: 0px;
+		float: left;
+	}
+	.entry-meta.author {
+		display: none;
+	}
+}	
+
+
+/* Your selected colors are below */
+body {
+	background-color: #042036;
+}
+a,
+a:visited { 
+	color: #1f4c70;
+}
+a:hover,
+a:active {
+	color: #57b6df;
+}
+::-moz-selection {
+	background: #1f4c70;
+}
+::selection {
+	background: #1f4c70;
+}
+
+/** Header
+ -------------------------------------------------- */
+#header {
+	background-color: #1f4c70;
+	border-bottom: 4px solid #042036;
+}
+#header a,
+#nav-main {
+	color: #f0f9ff;
+}
+#header a:hover {
+	color: #57b6df;
+}
+#header #site-name a img {
+	height: 72px;
+}
+
+/* Menu */
+#header .container {
+	padding-top: 0px;
+}
+
+#nav-main li {
+	border-color: #1f4c70;
+}
+#nav-main li:hover,
+#nav-main li.current-menu-item,
+#nav-main li.current-menu-parent {
+	border-color: #042036;
+}
+
+/* Sub Menu */
+#nav-main .sub-menu a:hover {
+	color: #1f4c70;
+}
+#nav-main .sub-menu {
+	background: #042036;
+	border-color: #1f4c70;
+}
+#nav-main .sub-menu li.current-menu-item > a {
+	border-left-color: #1f4c70;
+	border-right-color: #1f4c70;
+}
+
+/* Menu in dropdown mode */
+@media only screen and (max-width: 767px) {
+	#nav-main h1 {
+		border-color: #042036;
+	}
+	#nav-main .menu {
+		background-color: #042036;
+		border-color: #1f4c70;
+	}
+	#header #site-name {
+		height: 40px;
+	}
+	#header #site-name a img {
+		height: 50px;
+	}
+}
+
+/** Masthead
+ -------------------------------------------------- */
+#masthead {
+	background-color: #042036;
+}
+/* featured posts */
+#featured-posts .featured {
+	background-color: #1f4c70;
+	border-bottom-color: #1f4c70;
+}
+#featured-posts .featured-title,
+#featured-posts .has-featured-img .featured-format {
+	background-color: #1f4c70;
+	color: #f0f9ff;
+}
+#featured-posts .featured-content {
+	color: #f0f9ff;
+}
+/* gallery */
+/* set bg color to tile featured gallery with less than 4 images */
+#featured-posts .gallery-img-excerpt li.excerpt-img-0 {
+	background-color: #d4efff;
+}
+#featured-posts .gallery-img-excerpt li.excerpt-img-1 {
+	background-color: #57b6df;
+}
+#featured-posts .gallery-img-excerpt li.excerpt-img-2 {
+	background-color: #57b6df;
+}
+#featured-posts .gallery-img-excerpt li.excerpt-img-3 {
+	background-color: #d4efff;
+}
+/* video */
+#featured-posts .featured-format-video {
+	background-color: #d4efff;
+	border-bottom-color: #d4efff;
+}
+
+/* rollover */
+#featured-posts .featured:hover {
+	border-bottom-color: rgba(212,239,255, .8);
+}
+#featured-posts .featured:hover .featured-content {
+	background-color: rgb(212,239,255); /* fallback for IE */
+	background-color: rgba(212,239,255, .8);
+	color: #1f4c70;
+}
+
+
+/** Post
+ -------------------------------------------------- */
+.entry-date a:hover,
+.entry-meta a:hover {
+	color: #1f4c70;
+}
+.entry-media a:hover {
+	border-bottom-color: #57b6df;
+}
+.link-screenshot:hover {
+	border-bottom-color: #57b6df;
+}
+
+/** Sidebar, Widgets, Search Results
+ -------------------------------------------------- */
+.bio-box a {
+	color: #1f4c70;
+}
+.bio-box a:hover {
+	color: #f0f9ff;
+}
+.bio-box-gallery a.bio-carousel-nav:hover {
+	background-color: #57b6df;
+}
+.bio-box-gallery,
+.bio-box-content,
+.bio-box-links {
+	background-color: #57b6df;
+	color: #f0f9ff;
+}
+.bio-box-title {
+	color: #1f4c70;
+}
+.bio-box-links ul li a:hover {
+	border-color: #1f4c70;
+}
+.widget-title,
+.searchform,
+.search-title {
+	color: #042036;
+	background-color: #d4efff;
+}
+#primary .heading {
+	background-color: #d4efff;
+}
+#primary .heading .page-title {
+	color: #042036;
+}
+#primary .heading .page-title em {
+	color: #1f4c70;
+}
+
+.search-title em {
+	color: #1f4c70;
+}
+.searchform #s {
+	color: #1f4c70;
+}
+.searchform label {
+	color: #042036;
+}
+.searchform label.focus {
+	color: #57b6df;
+}
+.searchform #searchsubmit:hover,
+.searchform #searchsubmit:focus {
+	background-color: #042036;
+}
+.searchform #searchsubmit:active {
+	background-color: #1f4c70;
+}
+
+/** Footer
+ -------------------------------------------------- */
+#footer {
+	color: #f0f9ff;
+	background-color: #042036;
+}
+#footer a {
+	color: #d4efff;
+}
+
+/** Utilities
+ -------------------------------------------------- */
+.wp-caption dd {
+	color: #042036;
+	background-color: #f0f9ff;
+}
+.post .gallery-img-excerpt li a:hover,
+.attachment-next a:hover,
+.attachment-prev a:hover {
+	border-bottom-color: #57b6df;
+}
+.post .gallery-img-excerpt li.gallery-view-all a {
+	background-color: #f0f9ff;
+}
+.post .gallery-img-excerpt li.gallery-view-all a:hover {
+	background-color: #d4efff;
+}
+.post .gallery-thumbs a:hover {
+	border-bottom-color: #57b6df;
+}
+.post .gallery-thumbs a.activated {
+	border-bottom-color: #1f4c70;
+}
+.edit-link a {
+	background-color: #042036;
+}
+.edit-link a:hover {
+	background-color: #1f4c70;
+}
+
+
+/* Shortcode Gallery */
+#content .gallery-item .gallery-icon a:hover {
+	border-bottom-color: #57b6df;
+}
+
+/* Social */
+#social #reply-title,
+#social .comments-title,
+#social .nocomments,
+#social .social-nav,
+#social .social-nav a span {
+	background-color: #d4efff;
+}
+#social #reply-title {
+	color: #042036;
+}
+#social .social-heading,
+#social .nocomments {
+	color: #042036;
+}
+#social .social-nav a,
+#social #submit,
+#facebook_signin,
+#twitter_signin {
+	background-color: #042036;
+}
+#social .social-nav a:hover,
+#social #submit:hover,
+#facebook_signin:hover,
+#twitter_signin:hover {
+	background-color: #1f4c70;
+}		
+#social .social-nav a {
+	color: #042036;
+}
+#social .social-current-tab a,
+#social .social-nav a:hover {
+	color: #1f4c70;
+	background-color: #1f4c70;
+}
+#social .social-posted-from {
+	background-color: #d4efff;
+}
+#social .comment-awaiting-moderation {
+	background-color: #d4efff;
+	color: #1f4c70;
+}
+#social .social-posted-when:hover,
+#social .social-actions a:hover {
+	color: #57b6df;
+}
+
+
+
