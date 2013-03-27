@@ -205,8 +205,12 @@ a:active {
 .link-screenshot:hover {
 	border-bottom-color: #57b6df;
 }
-p.old_post_alert{
+p.old_post_alert {
 	background-color:#ffb0b0;
+}
+p.threads-post-notice {
+	background-color: #ddd;
+	padding: 5px;
 }
 
 /** Sidebar, Widgets, Search Results
