@@ -88,3 +88,13 @@ function fpcs_feed_byline($content) {
    return $content;
 }
 add_filter( "the_content_feed", "fpcs_feed_byline" );
+
+add_filter( 'twitter_cards_properties', 'twitter_custom' );
+
+function twitter_custom( $twitter_card ) {
+	if ( is_array( $twitter_card ) ) {
+		$twitter_card['creator'] = '@devinreams';
+		$twitter_card['site:id'] = '16420441';
+	}
+	return $twitter_card;
+}
