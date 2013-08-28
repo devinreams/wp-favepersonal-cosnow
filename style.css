@@ -9,9 +9,6 @@ Version: 1.0
 
 /* iPad handling */
 @media screen and (min-width: 768px) and (max-width: 1009px) {
-	#masthead {
-		display: none;
-	}
 	#nav-main {
 		padding-top: 0px;
 		float: left;
@@ -34,13 +31,6 @@ Version: 1.0
 	margin-top: 14px;
 }
 
-/* Hide the header on small mobile devices */
- 
-@media screen and (max-width: 768px) {
-	#masthead {
-		display: none;
-	}
-}
 
 /* Your selected colors are below */
 body {
@@ -1042,4 +1032,8 @@ body.rtl .sharing li {
 
 .rtl #sharing_email .sharing_cancel {
 	padding: 0 10px 0 0;
+}
+
+form#subscribe-blog-blog_subscription-3 {
+	padding: 0 10px;
 }
