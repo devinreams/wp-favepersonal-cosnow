@@ -18,3 +18,9 @@
 
 
 ?>
+<?php /*
+<div class="pagination h6 clearfix">
+        <span class="next"><?php next_posts_link() ?></span>
+        <span class="prev"><?php previous_posts_link() ?></span>
+</div>
+*/ ?>
