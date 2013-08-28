@@ -48,6 +48,7 @@ function fpcs_author() {
 add_action('favepersonal_content_sidebar_after', 'fpcs_author');
 add_action('favepersonal_excerpt_sidebar_after', 'fpcs_author');
 
+/*
 // add Add to Home Screen script
 function fpcs_scripts() {
 	if (is_home()) {
@@ -64,7 +65,8 @@ function fpcs_scripts() {
 	    wp_enqueue_script( 'add2home' );
     }
 }
-// add_action('wp_enqueue_scripts', 'fpcs_scripts');
+add_action('wp_enqueue_scripts', 'fpcs_scripts');
+*/
 
 // add Facebook ID for insights
 function fpcs_fbinsights() {
@@ -72,7 +74,7 @@ function fpcs_fbinsights() {
 }
 add_action('wp_head','fpcs_fbinsights');
 
-// add Infinite Scroll support
+//add Infinite Scroll support
 add_theme_support( 'infinite-scroll', array(
 	'container'  => 'primary',
 	'footer'     => 'footer',
@@ -89,12 +91,20 @@ function fpcs_feed_byline($content) {
 }
 add_filter( "the_content_feed", "fpcs_feed_byline" );
 
-add_filter( 'twitter_cards_properties', 'twitter_custom' );
-
+// add twitter card creator IDs for Rachel and Devin
 function twitter_custom( $twitter_card ) {
 	if ( is_array( $twitter_card ) ) {
-		$twitter_card['creator'] = '@devinreams';
+		global $post;
+		if ( get_the_author_meta( 'user_login' ) == 'Rachel' ) {
+			$twitter_card['creator'] = '@rls85';
+		} elseif ( get_the_author_meta( 'ID' ) == '1' ) {
+			$twitter_card['creator'] = '@devinreams';
+		} else {
+			$twitter_card['creator'] = '@cosnow';
+		}
 		$twitter_card['site:id'] = '16420441';
 	}
 	return $twitter_card;
 }
+add_filter( 'twitter_cards_properties', 'twitter_custom' );
+
