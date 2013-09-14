@@ -1034,6 +1034,10 @@ body.rtl .sharing li {
 	padding: 0 10px 0 0;
 }
 
-form#subscribe-blog-blog_subscription-3 {
+/* Get Updates via Email widget */
+#blog_subscription-4 {
+	background-color: #d7effd;
+}
+#subscribe-blog-blog_subscription-4 {
 	padding: 0 10px;
 }
