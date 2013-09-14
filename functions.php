@@ -3,7 +3,7 @@
 //define('CFCT_DEBUG', true);
 
 function fpdr_author_redirect() {
-	if(is_author( 'admin' )) { 
+	if(is_author( 'admin' )) {
 		wp_redirect( '/author/devin/', 301 );
 	}
 }
@@ -48,29 +48,18 @@ function fpcs_author() {
 add_action('favepersonal_content_sidebar_after', 'fpcs_author');
 add_action('favepersonal_excerpt_sidebar_after', 'fpcs_author');
 
-/*
-// add Add to Home Screen script
-function fpcs_scripts() {
-	if (is_home()) {
-		echo "<script type=\"text/javascript\">
-		var addToHomeConfig = {
-			animationIn: 'drop',
-			animationOut: 'fade',
-			lifespan: '10000',
-			touchIcon:true,
-			message:'Install Colorado Snow as an app on your <strong>%device</strong>. Tap the %icon icon and click <strong>Add to Home Screen</strong>.'
-		};
-		</script>";
-	    wp_register_script( 'add2home', get_bloginfo('stylesheet_directory') . '/add2home.js');
-	    wp_enqueue_script( 'add2home' );
-    }
+function fpcs_byline() {
+	echo "<p class=\"entry-meta author\">By <a href=\"" . get_author_posts_url(get_the_author_meta( 'ID' ))."\">";
+	echo get_the_author();
+	echo "</a></p>";
 }
-add_action('wp_enqueue_scripts', 'fpcs_scripts');
-*/
+add_action('favepersonal_content_sidebar_after', 'fpcs_byline');
 
-// add Facebook ID for insights
+
+// add insights and analytics
 function fpcs_fbinsights() {
 	echo "<meta property=\"fb:admins\" content=\"10200068\" />\n";
+        echo "<script src=\"/mint/?js\" type=\"text/javascript\"></script>\n";
 }
 add_action('wp_head','fpcs_fbinsights');
 
