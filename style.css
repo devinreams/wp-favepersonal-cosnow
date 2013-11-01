@@ -1041,3 +1041,8 @@ body.rtl .sharing li {
 #subscribe-blog-blog_subscription-4 {
 	padding: 0 10px;
 }
+
+/* Underline links in content */
+.entry-content a {
+	text-decoration: underline;
+}
