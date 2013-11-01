@@ -55,14 +55,6 @@ function fpcs_byline() {
 }
 add_action('favepersonal_content_sidebar_after', 'fpcs_byline');
 
-
-// add insights and analytics
-function fpcs_fbinsights() {
-	echo "<meta property=\"fb:admins\" content=\"10200068\" />\n";
-        echo "<script src=\"/mint/?js\" type=\"text/javascript\"></script>\n";
-}
-add_action('wp_head','fpcs_fbinsights');
-
 //add Infinite Scroll support
 add_theme_support( 'infinite-scroll', array(
 	'container'  => 'primary',
