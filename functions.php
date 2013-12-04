@@ -2,6 +2,8 @@
 
 //define('CFCT_DEBUG', true);
 
+add_filter('widget_text', 'do_shortcode');
+
 function fpdr_author_redirect() {
 	if(is_author( 'admin' )) {
 		wp_redirect( '/author/devin/', 301 );
