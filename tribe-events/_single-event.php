@@ -23,7 +23,7 @@ $event_id = get_the_ID();
 
 	<p class="tribe-events-back"><a href="<?php echo tribe_get_events_link() ?>"> <?php _e( '&laquo; All Events', 'tribe-events-calendar' ) ?></a></p>
 
-	<?php the_title( '<h1 class="tribe-events-single-event-title summary entry-title">', '</h1>' ); ?>
+	<h1 class="tribe-events-single-event-title summary entry-title"><?php get_the_title(); ?></h1>
 
 	<div class="tribe-events-schedule updated published tribe-clearfix">
 		<h2><?php echo tribe_events_event_schedule_details(); ?></h2>

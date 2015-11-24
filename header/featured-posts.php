@@ -4,6 +4,7 @@
 <?php
 
 echo $content;
+wp_reset_query();
 
 ?>
 		</div>

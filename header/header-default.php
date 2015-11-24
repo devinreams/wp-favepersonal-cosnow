@@ -34,6 +34,17 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	Empty conditional comment prevents blocking downloads in IE8. Good ol' IE.
 	See http://www.phpied.com/conditional-comments-block-downloads/ for more info. */ ?>
 	<!--[if IE]><![endif]-->
+<script>
+var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -2,6 +2,9 @@
 
 //define('CFCT_DEBUG', true);
 
+update_option('siteurl','http://cosnow.com');
+update_option('home','http://cosnow.com');
+
 add_filter('widget_text', 'do_shortcode');
 
 function fpdr_author_redirect() {
