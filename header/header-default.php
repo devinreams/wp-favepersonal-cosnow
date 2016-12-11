@@ -12,7 +12,7 @@
  * **********************************************************************
  * This program is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * **********************************************************************
  */
 
@@ -61,12 +61,13 @@ var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
 			</nav>
 		</div><!-- .container -->
 	</header><!-- #header -->
-	
-<?php
 
-cfcp_header_display();
+	<?php
+	cfcp_header_display();
+	?>
 
-?>	
-	
 	<section id="content">
 		<div class="container clearfix">
+			<div id="follow-on-apple-news">
+				<a href="https://apple.news/T3CtnoBLBQHKnwLJLlmJehg"><img src="http://cosnow.com/wp-content/themes/cosnow/images/Follow_on_AppleNews.png" title="Follow Colorado Snow on Apple News" style="height: 19px" height="19px"></a>
+			</div>

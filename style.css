@@ -6,27 +6,6 @@ Template: favepersonal
 Version: 1.0
 */
 
-
-/* iPad handling */
-@media screen and (min-width: 768px) and (max-width: 1009px) {
-	#nav-main {
-		padding-top: 0px;
-		float: left;
-	}
-}	
-
-/* Desktop and landscape iPad header nav handling */
-@media all and (min-width: 769px) {
-	#nav-main {
-		padding-top: 34px;
-		float: right;
-	}
-	#infinite-handle span {
-		float: right;
-	}
-}
-
-
 #attachment-thumb-img {
 	margin-top: 14px;
 }
@@ -37,7 +16,7 @@ body {
 	background-color: #042036;
 }
 a,
-a:visited { 
+a:visited {
 	color: #1f4c70;
 }
 a:hover,
@@ -95,28 +74,6 @@ a:active {
 	border-right-color: #1f4c70;
 }
 
-/* iPhone landscape and portrait logo and menu (dropdown) */
-
-@media only screen and (max-width: 767px) {
-	#nav-main h1 {
-		border-color: #042036;
-	}
-	#nav-main .menu {
-		background-color: #042036;
-		border-color: #1f4c70;
-	}
-	#header #site-name {
-		height: 43px;
-	}
-	#header #site-name a img {
-		height: 43px;
-	}
-	.entry-meta.author,
-	.entry-meta-replies {
-		display: none;
-	}
-}
-
 @media only screen and (max-width: 320px) {
 	#header #site-name {
 		height: 32px;
@@ -127,6 +84,73 @@ a:active {
 	.entry-meta.author,
 	.entry-meta-replies {
 		display: none;
+	}
+}
+
+#follow-on-apple-news {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+#follow-on-apple-news img {
+	top: 50%;
+	left: 50%;
+}
+
+
+@media only screen and (max-width: 767px) {
+	#nav-main .menu {
+		background-color: #042036;
+		border-color: #1f4c70;
+	}
+	#follow-on-apple-news {
+			display: block;
+			padding-bottom: 20px;
+	}
+	#content {
+		background-color: #fff;
+		padding: 20px 0;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#follow-on-apple-news {
+			display: none;
+	}
+}
+
+
+@media only screen and (max-width: 1023px) {
+	#nav-main h1 {
+		border-color: #042036;
+	}
+	#header #site-name {
+		height: 32px;
+	}
+	#header #site-name a img {
+		height: 32px;
+	}
+	.entry-meta.author,
+	.entry-meta-replies {
+		display: none;
+	}
+	#masthead {
+		display: none
+	}
+}
+
+
+/* Desktop and landscape iPad header nav handling */
+@media all and (min-width: 1024px) {
+	#nav-main {
+		padding-top: 34px;
+		float: right;
+	}
+	#infinite-handle span {
+		float: right;
+	}
+	#follow-on-apple-news {
+			display: none;
 	}
 }
 
@@ -197,6 +221,7 @@ a:active {
 }
 p.old_post_alert {
 	background-color:#ffb0b0;
+	padding: 5px;
 }
 p.threads-post-notice {
 	background-color: #ddd;
@@ -334,7 +359,7 @@ p.threads-post-notice {
 #facebook_signin:hover,
 #twitter_signin:hover {
 	background-color: #1f4c70;
-}		
+}
 #social .social-nav a {
 	color: #042036;
 }
@@ -357,7 +382,7 @@ p.threads-post-notice {
 
 .author-bio {
 	border-bottom: 2px solid black;
-	margin-bottom: 40px	
+	margin-bottom: 40px
 }
 .author-info .avatar {
 	float:left;
@@ -525,7 +550,7 @@ p.threads-post-notice {
 
 
 
-div.sharedaddy ul, 
+div.sharedaddy ul,
 div.sharedaddy li {
 	margin: 0;
 	padding: 0;
@@ -534,15 +559,15 @@ div.sharedaddy li {
 	background: none;
 }
 
-div.sharedaddy, 
-#content div.sharedaddy, 
+div.sharedaddy,
+#content div.sharedaddy,
 #main div.sharedaddy {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	clear: both;
 }
 
-div.sharedaddy, 
+div.sharedaddy,
 div.sharedaddy div {
 	-webkit-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
@@ -567,7 +592,7 @@ div.sharedaddy h3,
 	border: none;
 }
 
-.rtl div.sharedaddy h3, 
+.rtl div.sharedaddy h3,
 .rtl #content div.sharedaddy h3,
 .rtl #main div.sharedaddy h3,
 .rtl #primary div.sharedaddy h3 {
@@ -575,7 +600,7 @@ div.sharedaddy h3,
 	text-align: right;
 }
 
-div.sharedaddy ul, 
+div.sharedaddy ul,
 div.sharedaddy li {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -596,19 +621,19 @@ div.sharedaddy div.pd-rating {
 	min-height: 23px;
 }
 
-div.sharedaddy a, 
-div.sharedaddy a:link, 
+div.sharedaddy a,
+div.sharedaddy a:link,
 div.sharedaddy a:visited {
 	font-style: normal;
 }
 
 /* ClearFix trick */
 
-div.sharedaddy:before, 
+div.sharedaddy:before,
 div.sharedaddy:after,
-div.sharedaddy .sd-block:before, 
+div.sharedaddy .sd-block:before,
 div.sharedaddy .sd-block:after,
-div.sharedaddy ul:before, 
+div.sharedaddy ul:before,
 div.sharedaddy ul:after {
 	content: "\0020";
 	display: block;
@@ -646,7 +671,7 @@ div.sharedaddy.sharedaddy-dark .sd-block {
 }
 
 div.sharedaddy .sd-content {
-	width: 82.125%; /* 530px / 640px */ 
+	width: 82.125%; /* 530px / 640px */
 	float: right;
 	margin: -2px 0 0 0;
 }
@@ -852,17 +877,17 @@ a.sd-button.share-more span {
 		background-image: url('images/facebook@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-tumblr a.sd-button > span {
 		background-image: url('images/tumblr@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-twitter a.sd-button > span {
 		background-image: url('images/twitter@2x.png?1');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-google-plus-1 a.sd-button > span {
 		background-image: url('images/googleplus1@2x.png');
 		background-size: 16px 16px;
@@ -872,42 +897,42 @@ a.sd-button.share-more span {
 		background-image: url('images/linkedin@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-press-this a.sd-button > span {
 		background-image: url('images/wordpress@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-digg a.sd-button > span {
 		background-image: url('images/digg@2x.png?1');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-stumbleupon a.sd-button > span {
 		background-image: url('images/stumbleupon@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-reddit a.sd-button > span {
 		background-image: url('images/reddit@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-pinterest a.sd-button > span {
 		background-image: url('images/pinterest@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-email a.sd-button > span {
 		background-image: url('images/email@2x.png?1');
 		background-size: 16px 16px;
 	}
-	
+
 	li.share-print a.sd-button > span {
 		background-image: url('images/print@2x.png');
 		background-size: 16px 16px;
 	}
-	
+
 	a.sd-button.share-more span {
 		background-image: url('images/more@2x.png?1');
 		background-size: 16px 16px;

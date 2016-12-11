@@ -38,17 +38,15 @@ add_filter('social_comment_block_order', 'akv3_social_comment_block_order');
 
 // remove the CSS for Colors from the HTML (if you want to load it via child theme instead)
 function favepersonal_remove_inline_color_css() {
-	remove_action('wp_head', 'cfcp_color_css_min', 8); 
+	remove_action('wp_head', 'cfcp_color_css_min', 8);
 }
 add_action('wp', 'favepersonal_remove_inline_color_css', 11);
 
 // Show author avatar next to posts (except mine)
 function fpcs_author() {
-	if (get_the_author_meta('ID') != "1" ) {
-		echo "<p class=\"entry-meta author\"><a href=\"" . get_author_posts_url(get_the_author_meta( 'ID' ))."\">";
-		echo get_avatar( get_the_author_meta('ID'), 32 );
-		echo "</a></p>";
-	}
+	echo "<p class=\"entry-meta author\"><a href=\"" . get_author_posts_url(get_the_author_meta( 'ID' ))."\">";
+	echo get_avatar( get_the_author_meta('ID'), 32 );
+	echo "</a></p>";
 }
 add_action('favepersonal_content_sidebar_after', 'fpcs_author');
 add_action('favepersonal_excerpt_sidebar_after', 'fpcs_author');
@@ -82,7 +80,7 @@ function twitter_custom( $twitter_card ) {
 	if ( is_array( $twitter_card ) ) {
 		global $post;
 		if ( get_the_author_meta( 'user_login' ) == 'Rachel' ) {
-			$twitter_card['creator'] = '@rls85';
+			$twitter_card['creator'] = '@rstephensme';
 		} elseif ( get_the_author_meta( 'ID' ) == '1' ) {
 			$twitter_card['creator'] = '@devinreams';
 		} else {
@@ -93,4 +91,3 @@ function twitter_custom( $twitter_card ) {
 	return $twitter_card;
 }
 add_filter( 'twitter_cards_properties', 'twitter_custom' );
-
