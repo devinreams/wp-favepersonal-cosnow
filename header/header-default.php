@@ -29,7 +29,7 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes() ?>> <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo('charset') ?>" />
-	<title><?php wp_title( '-', true, 'right' ); echo esc_html( get_bloginfo('name'), 1 ).$title_description; ?></title>
+	<title><?php wp_title( '' ); if (!is_home()) echo " - "; echo esc_html( get_bloginfo('name'), 1 ).$title_description; ?></title>
 	<?php /*
 	Empty conditional comment prevents blocking downloads in IE8. Good ol' IE.
 	See http://www.phpied.com/conditional-comments-block-downloads/ for more info. */ ?>
