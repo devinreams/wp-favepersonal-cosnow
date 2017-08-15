@@ -45,21 +45,14 @@ var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
     s.parentNode.insertBefore(p, s);
 })();
 </script>
-	<link rel="mask-icon" href="http://cosnow.com/wp-content/themes/cosnow/safari-pinned-tab.svg" color="#294c6d">
+	<link rel="mask-icon" href="https://cosnow.com/wp-content/themes/cosnow/safari-pinned-tab.svg" color="#294c6d">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
-	<script>
-	  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-	  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-	  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-	  insertBefore(d,q)}(window,document,'script','_gs');
-	  _gs('GSN-300719-N');
-	</script>
 </head>
 <body <?php body_class(); ?>>
 	<header id="header">
 		<div class="container clearfix">
-			<h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'favepersonal'); ?>"><img height="72" src="http://cosnow.com/wp-content/themes/cosnow/cosnow-logo-long-light.png" title="Colorado Snow"></a></h1>
+			<h1 id="site-name"><a href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'favepersonal'); ?>"><img height="72" src="https://cosnow.com/wp-content/themes/cosnow/cosnow-logo-long-light.png" title="Colorado Snow"></a></h1>
 			<nav id="nav-main">
 				<h1><?php _e('Menu', 'favepersonal'); ?></h1>
 				<?php wp_nav_menu( array(
@@ -77,7 +70,10 @@ var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
 
 	<section id="content">
 		<div class="container clearfix">
+
+		<?php $loop = new WP_Query( array( 'post_type' => 'tribe_events', 'posts_per_page' => 2 ) ); ?>
+		<?php if ($loop->have_posts()) { ?>
 			<p style="background:#d4efff;padding:10px;margin-bottom:20px;"><strong><a href="/events/">Upcoming Events:</a></strong>
-				<?php $loop = new WP_Query( array( 'post_type' => 'tribe_events', 'posts_per_page' => 2 ) ); ?>
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?><?php if($loop->current_post!=0) echo ", "; ?><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php endwhile; wp_reset_query(); ?>
 			</p>
+		<?php } ?>

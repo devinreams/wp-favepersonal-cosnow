@@ -7,10 +7,10 @@
 			?>
 		</div>
 	</div><!-- .container -->
+	<?php /* DISABLE HEADER AD
     <div id="header-ads" style="margin-top:30px;">
-            <center>
-              <span id="header-ad-1" onclick="_gs('event', 'Clicked Header Ad 1')"><script type="text/javascript" src="//www.avantlink.com/link.php?ml=423513&amp;p=105541&amp;pw=125397&amp;open=_blank"></script></span>
-              <span id="header-ad-2" onclick="_gs('event', 'Clicked Header Ad 2')"><script type="text/javascript" src="//www.avantlink.com/link.php?ml=29213&amp;p=105541&amp;pw=125397&amp;open=_blank"></script></span>
+            <center><a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=196169&amp;pw=125397" target="_blank"><img src="//www.avantlink.com/gbi/10248/196169/105541/125397/image.jpg" width="728" height="90" style="border: 0px;" alt="" /></a>
             </center>
     </div>
+	*/ ?>
 </aside><!-- #masthead -->

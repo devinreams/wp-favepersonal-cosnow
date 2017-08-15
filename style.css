@@ -163,6 +163,7 @@ a:active {
  -------------------------------------------------- */
 #masthead {
 	background-color: #042036;
+	padding: 26px 0 30px 0;
 }
 /* featured posts */
 #featured-posts .featured {
