@@ -68,3 +68,6 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 
 	<section id="content">
 		<div class="container clearfix">
+
+			<p style="background:#d4efff;padding:10px;margin-bottom:20px;"><strong>Sponsored Deals:</strong> <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=52361&amp;pw=125397">lift tickets from $40/day (save 60%)<img src="//www.avantlink.com/tpv/10065/52361/105541/125397/-/ml/image.png" width="0" height="0" style="visibility: hidden; border: none !important; margin: 0px !important;" alt="" /></a>, <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=264573&amp;pw=125397">up to 50% off at REI Outlet<img src="//www.avantlink.com/tpv/10248/264573/105541/125397/-/ml/image.png" width="0" height="0" style="visibility: hidden; border: none !important; margin: 0px !important;" alt="" /></a>, <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=31269&amp;pw=125397">10% off at Moosejaw with code NSB10 (exclusions apply)<img src="//www.avantlink.com/tpv/10086/31269/105541/125397/-/ml/image.png" width="0" height="0" style="visibility: hidden; border: none !important; margin: 0px !important;" alt="" /></a>
+			</p>
