@@ -34,19 +34,17 @@ $title_description = (is_home() && !empty($blog_desc) ? ' - '.$blog_desc : '');
 	Empty conditional comment prevents blocking downloads in IE8. Good ol' IE.
 	See http://www.phpied.com/conditional-comments-block-downloads/ for more info. */ ?>
 	<!--[if IE]><![endif]-->
-<script>
-var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
-             ['mark', 'firstbyte', (new Date()).getTime()]];
-(function() {
-    var s = document.getElementsByTagName('script')[0]
-      , p = document.createElement('script');
-    p.async = 'async';
-    p.src = '//rum-static.pingdom.net/prum.min.js';
-    s.parentNode.insertBefore(p, s);
-})();
-</script>
 	<link rel="mask-icon" href="https://cosnow.com/wp-content/themes/cosnow/safari-pinned-tab.svg" color="#294c6d">
 	<meta name="theme-color" content="#ffffff">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177400-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-177400-3');
+	</script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -70,10 +68,3 @@ var _prum = [['id', '53e7b91eabe53d972aa4aa51'],
 
 	<section id="content">
 		<div class="container clearfix">
-
-		<?php $loop = new WP_Query( array( 'post_type' => 'tribe_events', 'posts_per_page' => 2 ) ); ?>
-		<?php if ($loop->have_posts()) { ?>
-			<p style="background:#d4efff;padding:10px;margin-bottom:20px;"><strong><a href="/events/">Upcoming Events:</a></strong>
-				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?><?php if($loop->current_post!=0) echo ", "; ?><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php endwhile; wp_reset_query(); ?>
-			</p>
-		<?php } ?>
